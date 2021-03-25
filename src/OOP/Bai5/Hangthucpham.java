@@ -97,12 +97,12 @@ public class Hangthucpham {
         if (xetGhichu() == false) {
             Ghichu = "Hàng Hết Hạn";
         }
-        DateTimeFormatter ngay = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        DecimalFormat gia = new DecimalFormat("#,###.00VND");
-        String dg = gia.format(donGia);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DecimalFormat df = new DecimalFormat("#,###.00VND");
+        String dg = df.format(donGia);
 
 
-        return String.format("%-8s %-8s %20s %-15s %-15s %-15s", mahang, tenhang,dg, nsx.format(ngay), hsd.format(ngay), Ghichu);
+        return String.format("%-8s %-8s %20s %-15s %-15s %-15s", mahang, tenhang,dg, nsx.format(dtf), hsd.format(dtf), Ghichu);
     }
 
 
